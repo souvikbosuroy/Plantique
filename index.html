@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="plant-trees-gardening">
+
+    <!-- ============================ title =============================== -->
+
+    <title>Plantique</title>
+
+    <!-- ============================ CSS link ============================== -->
+
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!-- ============================ responsive css link ========================== -->
+
+    <link rel="stylesheet" href="./CSS/responsive.css">
+
+    <!-- ============================ font awesome CDN link =============================== -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============================ bootstrap icon CDN ============================ -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- ============================ jquery CDN ============================== -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- ============================ swiper js CDN =========================== -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <!-- =========================== header ============================ -->
+
+    <header>
+
+        <!-- =========================== navbar-start ============================== -->
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="./IMG/logo.webp" alt="logo">
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li class="active"><a href="#home">Home</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="user-options">
+                    <form class="search-bar" action="">
+                        <input type="text" placeholder="Search more" id="search-text">
+                    </form>
+                    <i class="search-icon fa-solid fa-magnifying-glass"></i>
+                    <a href="#shop">Shop</a>
+                    <a href="#log-in">Log in</a>
+                    <i class="ico fa fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ========================= navbar-end ============================= -->
+
+    </header>
+
+    <!-- ========================= main-start ============================ -->
+
+    <main>
+
+        <!-- ========================== banner ========================== -->
+
+        <section class="banner">
+            <div class="container">
+                <div class="row">
+                    <p class="banner-head">Plantique</p>
+                    <div class="banner-text">
+                        <h1>grow</h1>
+                        <h2>th</h2>
+                        <figure class="leaf">
+                            <img src="./IMG/leaf-absolute.webp" alt="">
+                        </figure>
+                    </div>
+                    <p class="desc">We're your online houseplant destination. We offer a wide range of houseplants and
+                        accessories
+                        shipped directly from our (greenhouse to yours!</p>
+                    <div class="plant-count">
+                        <div class="plant-figure">
+                            <p class="head">100+ Plants</p>
+                            <p class="plant-desc">We want our visitors to be inspire to get their hands dirty</p>
+                        </div>
+                        <div class="plant-type">
+                            <figure id="top">
+                                <img src="./IMG/plant-type-1.webp" alt="">
+                            </figure>
+                            <figure id="center">
+                                <img src="./IMG/plant-type-2.webp" alt="">
+                            </figure>
+                            <figure id="bottom">
+                                <img src="./IMG/plant-type-3.webp" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="shop-plants">
+                        <a href="#shop-plants">Shop Tropical Plants</a>
+                    </div>
+                    <div class="arrow-down">
+                        <a href="#footer" aria-label="go-down"><i class="bi bi-arrow-down"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================== for people =========================== -->
+
+        <section class="for-people">
+            <div class="container">
+                <div class="row">
+                    <div class="heading">
+                        <h2>Plants for the People</h2>
+                        <p>We want our Visitors to be inspire to get their hands dirty</p>
+                    </div>
+                    <div class="video-content">
+                        <i class="play fa-solid fa-play"></i>
+                        <video autoplay>
+                            <source src="./VIDEO/6186129-sd_426_240_24fps.mp4" type="video/mp4">
+                            <track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
+                        </video>
+                    </div>
+                    <div class="people-desc">
+                        <p>Each plant is cared <span class="image"><img src="./IMG/logo-p.webp" alt=""></span> for by our
+                            horticultural experts, so they are as happy as healthy as they get.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================== plant-gallery ============================= -->
+
+        </section>
+        <section class="plant-gallery">
+            <div class="container">
+                <div class="row" id="row-1">
+                    <div class="gallery-menu">
+                        <a href="#outdoor-plant" class="active" aria-label="outdoor-plant">Outdoor Plant</a>
+                        <a href="#indoor-plant" aria-label="indoor-plant">Indoor Plant</a>
+                        <a href="#flower-plant" aria-label="flower-plant">Flower Plant</a>
+                        <a href="#potted-plant" aria-label="potted-plant">Potted Plant</a>
+                    </div>
+                    <button type="button" class="see-all">See All</button>
+                </div>
+                <div class="row" id="row-2">
+                    <div class="plant-card-layout">
+                        <div class="plant-card" id="pet-friendly">
+                            <div class="heading">
+                                <h3>Pet Friendly Plants</h3>
+                                <button type="button" aria-label="go-to-the-page"><i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                            <div class="plant-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a
+                                    dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis
+                                    orci elementum egestas lobortis.</p>
+                            </div>
+                            <div class="button">
+                                <button class="plant-btn"><img src="./IMG/flower-icon.webp" alt="">Piperaceae</button>
+                            </div>
+                        </div>
+                        <div class="plant-card" id="orchids">
+                            <div class="heading">
+                                <h3>Orchids</h3>
+                                <button type="button" aria-label="go-to-the-page"><i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                            <div class="plant-desc">
+                                <p>Orchids are easily everyones Favorite flowering plant, Find new orchids and orchids
+                                    success items in this collection</p>
+                            </div>
+                            <div class="button">
+                                <button class="plant-btn" type="button"><img src="./IMG/flower-icon.webp"
+                                        alt="">Araceae</button>
+                            </div>
+                        </div>
+                        <div class="plant-card" id="succulents">
+                            <div class="heading">
+                                <h3>Succulents</h3>
+                                <button type="button" aria-label="go-to-the-page"><i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                            <div class="plant-desc">
+                                <p>All Succulents are cacti, but not all cacti are succulents. Both make low maintence
+                                    house pants.</p>
+                            </div>
+                            <div class="button">
+                                <button class="plant-btn"><img src="./IMG/flower-icon.webp" alt="">Moraceae</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================ new-plants ============================= -->
+
+        <section class="new-plants">
+            <div class="container">
+                <div class="row">
+                    <div class="heading">
+                        <h2>New Plants</h2>
+                        <p>Bring nature insider and shop our big selections of fresh indoor plants including
+                            Instagram-worthy houseplants, pet-friendly plants, orchids and one-of-a-kind rare plants.
+                        </p>
+                    </div>
+                    <div class="new-plants-part-2">
+                        <div class="new-plants-card-layout">
+                            <!-- Swiper -->
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card-image">
+                                            <figure>
+                                                <img src="./IMG/new-card-img-1.webp" alt="">
+                                            </figure>
+                                            <div class="wishlist-btn">
+                                                <i class="heart fa fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-desc">
+                                                <h3>Peperomia Plants</h3>
+                                                <p>Moist but well-drained</p>
+                                                <p class="price">₹122,056</p>
+                                            </div>
+                                            <button type="button" aria-label="go-to-the-page"><i
+                                                    class="fa fa-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-image">
+                                            <figure>
+                                                <img src="./IMG/new-card-img-2.webp" alt="">
+                                            </figure>
+                                            <div class="wishlist-btn">
+                                                <i class="heart fa fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-desc">
+                                                <h3>Fiddle-Leaf Fig</h3>
+                                                <p>Moist but well-drained</p>
+                                                <p class="price">₹162,056</p>
+                                            </div>
+                                            <button type="button" aria-label="go-to-the-page"><i
+                                                    class="fa fa-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-image">
+                                            <figure>
+                                                <img src="./IMG/new-card-img-3.webp" alt="">
+                                            </figure>
+                                            <div class="wishlist-btn">
+                                                <i class="heart fa fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-desc">
+                                                <h3>Calathea Orbifolia</h3>
+                                                <p>Moist but well-drained</p>
+                                                <p class="price">₹102,056</p>
+                                            </div>
+                                            <button type="button" aria-label="go-to-the-page"><i
+                                                    class="fa fa-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-image">
+                                            <figure>
+                                                <img src="./IMG/new-card-img-2.webp" alt="">
+                                            </figure>
+                                            <div class="wishlist-btn">
+                                                <i class="heart fa fa-heart"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-desc">
+                                                <h3>Fiddle-Leaf Fig</h3>
+                                                <p>Moist but well-drained</p>
+                                                <p class="price">₹162,056</p>
+                                            </div>
+                                            <button type="button" aria-label="go-to-the-page"><i
+                                                    class="fa fa-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================== indoor ============================== -->
+
+        <section class="indoor">
+            <div class="container">
+                <div class="row">
+                    <div class="heading">
+                        <h2>Indoor Collection</h2>
+                    </div>
+                    <div class="indoor-part-2">
+                        <div class="indoor-collection-layout">
+                            <div class="indoor-card" id="card-1">
+                                <div class="button">
+                                    <button type="button" aria-label="go-to-the-page"><i
+                                            class="fa fa-arrow-right"></i></button>
+                                </div>
+                                <h3 id="card-name">Philodendron</h3>
+                                <div class="card-content">
+                                    <h3>Philodendron</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum
+                                        ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                                        lobortis orci elementum egestas lobortis.</p>
+                                </div>
+                            </div>
+                            <div class="indoor-card" id="card-2">
+                                <div class="button">
+                                    <button type="button" aria-label="go-to-the-page"><i
+                                            class="fa fa-arrow-right"></i></button>
+                                </div>
+                                <h3 id="card-name">Calathea</h3>
+                                <div class="card-content">
+                                    <h3>Calathea</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum
+                                        ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                                        lobortis orci elementum egestas lobortis.</p>
+                                </div>
+                            </div>
+                            <div class="indoor-card" id="card-3">
+                                <div class="button">
+                                    <button type="button" aria-label="go-to-the-page"><i
+                                            class="fa fa-arrow-right"></i></button>
+                                </div>
+                                <h3 id="card-name">Air Purifying</h3>
+                                <div class="card-content">
+                                    <h3>Air Purifying</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum
+                                        ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                                        lobortis orci elementum egestas lobortis.</p>
+                                </div>
+                            </div>
+                            <div class="indoor-card" id="card-4">
+                                <div class="button">
+                                    <button type="button" aria-label="go-to-the-page"><i
+                                            class="fa fa-arrow-right"></i></button>
+                                </div>
+                                <h3 id="card-name">Low Light Tolerant</h3>
+                                <div class="card-content">
+                                    <h3>Low Light Tolerant</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum
+                                        ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                                        lobortis orci elementum egestas lobortis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================= quality ============================== -->
+
+        <section class="quality">
+            <div class="container">
+                <div class="row">
+                    <div class="heading">
+                        <h2>Quality Plants and Curated Goods</h2>
+                        <p>We offer a carefully curated selection of indoor and outdoor plants, hand crafted home goods
+                            that
+                            put quality ahead of quantity, and living art made right here in the shop: terrariums,
+                            landscapes, arrangements, vessels, and holders.</p>
+                    </div>
+                    <div class="quality-content">
+                        <figure id="content-image">
+                            <img src="./IMG/quality-content.webp" alt="">
+                        </figure>
+                        <div class="play-icon">
+                            <figure>
+                                <img src="./IMG/play-quality.webp" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="accordion">
+            <div class="container">
+                <div class="row">
+                    <div class="accordion-wrapper">
+                        <div class="faq-content" id="question-1">
+                            <div class="question">
+                                <h3>Potting Services</h3>
+
+                            </div>
+                            <div class="answer">
+                                <p>We offer potting on in store purchases or you are welcome to bring in your own and we
+                                    can pot them for you: There is a fee depending one what supplies are used. Visit us
+                                    or call us for more
+                                    details.</p>
+                            </div>
+                        </div>
+                        <div class="faq-content" id="question-2">
+                            <div class="question">
+                                <h3>Do we Ship Plants?</h3>
+                            </div>
+                            <div class="answer">
+                                <p>We offer potting on in store purchases or you are welcome to bring in your own and we
+                                    can pot them for you: There is a fee depending one what supplies are used. Visit us
+                                    or call us for more
+                                    details.</p>
+                            </div>
+                        </div>
+                        <div class="faq-content" id="question-3">
+                            <div class="question">
+                                <h3>Ordering for Pick up?</h3>
+                            </div>
+                            <div class="answer">
+                                <p>We offer potting on in store purchases or you are welcome to bring in your own and we
+                                    can pot them for you: There is a fee depending one what supplies are used. Visit us
+                                    or call us for more
+                                    details.</p>
+                            </div>
+                        </div>
+                        <div class="faq-content" id="question-4">
+                            <div class="question">
+                                <h3>Ordering for Delivery?</h3>
+                            </div>
+                            <div class="answer">
+                                <p>We offer potting on in store purchases or you are welcome to bring in your own and we
+                                    can pot them for you: There is a fee depending one what supplies are used. Visit us
+                                    or call us for more
+                                    details.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================== footer ========================= -->
+    <footer class="footer" id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="row-head">
+              <figure>
+                <img src="./IMG/contact-image.webp" alt="contact-image" />
+              </figure>
+            </div>
+            <h2>Join the Community!</h2>
+            <p>
+              Subscribe to The Forager to receive monthly plant tips, store
+              updates, promotions & more
+            </p>
+            <div class="footer-bottom">
+              <div class="footer-menu">
+                <ul>
+                  <li><a href="#" id="instagram" aria-label="Instagram">Instagram</a></li>
+                  <li><a href="#" id="twitter" aria-label="Twitter">Twitter</a></li>
+                  <li><a href="#" id="linkedin" aria-label="Linkedin">Linkedin</a></li>
+                  <li><a href="#" id="whatsapp" aria-label="Whatsapp" class="select">Whatsapp</a></li>
+                  <li><a href="#" id="pinterest" aria-label="Pinterest">Pinterest</a></li>
+                </ul>
+              </div>
+              <div class="footer-text">
+                <p class="bottom">&copy;2023, All Right Reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+
+    <!-- ======================== main-ending ========================= -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            autoplay: true,
+            loop: true,
+            delay: 500,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                350: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                480: {
+                    slidesPerView: 1.3,
+                    spaceBetween: 20,
+                },
+                568: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 15,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+                1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 15,
+                },
+                1200: {
+                    slidesPerView: 3
+                }
+            },
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".search-icon").click(function () {
+                $(".search-bar").slideToggle(500);
+            });
+
+            $(".ico").click(function () {
+                $(this).toggleClass("fa-xmark")
+                $(".nav-menu").slideToggle(500)
+            });
+            $(window).resize(function () {
+                if (screen.width > 992)
+                    $(".nav-menu").show();
+            })
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".heart").click(function () {
+                $(this).css({
+                    color: "red"
+                });
+                $(this).removeProp({ color: red })
+
+            });
+        }); 
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".accordion-wrapper").on("click", ".question", function () {
+                $(this).toggleClass("active").next().slideToggle();
+                $(".answer").not($(this).next()).slideUp(300);
+                $(this).siblings().removeClass("active");
+            });
+        });
+    </script>
+</body>
+
+</html>
