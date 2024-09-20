@@ -1,0 +1,1574 @@
+@font-face {
+    src: url(../FONT/lufga/LufgaBold.ttf);
+    src: url(../FONT/lufga/LufgaBlack.ttf);
+    src: url(../FONT/lufga/LufgaLight.ttf);
+    src: url(../FONT/lufga/LufgaMedium.ttf);
+    src: url(../FONT/lufga/LufgaRegular.ttf);
+    src: url(../FONT/lufga/LufgaSemiBold.ttf);
+    font-family: "lufga";
+}
+
+/* ======================== common styling ========================= */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "lufga";
+    font-size: 20px;
+    background-color: transparent;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1330px;
+    width: 100%;
+    padding: 0px 40px;
+}
+
+section,
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 280px;
+    font-weight: bolder;
+    font-family: "lufga";
+}
+
+h2 {
+    font-size: 44px;
+    font-weight: 800;
+}
+
+h3,
+h4 {
+    font-weight: 600;
+}
+
+ul li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ============================= navbar ============================== */
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 37px 0;
+    position: absolute;
+    z-index: 500;
+}
+
+.navbar .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .container .nav-menu {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.navbar .container .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+
+}
+
+.ico {
+    color: white;
+    display: none !important;
+}
+
+.navbar .container .logo img {
+    width: 100%;
+}
+
+.navbar .container .logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 8px rgb(155, 155, 155));
+    margin: 2%;
+}
+
+.navbar .container .nav-menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .container .nav-menu ul li {
+    width: 168px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.navbar .container .nav-menu ul li a {
+    color: white;
+    font-weight: normal;
+    transition: all 0.5s ease;
+}
+
+.navbar .container .nav-menu ul li:hover {
+    background-color: white;
+    transform: scale(1.1);
+    margin: 2%;
+
+    a {
+        color: black;
+    }
+}
+
+.navbar .container .nav-menu ul li.active {
+    background-color: #ffffff;
+
+    a {
+        color: black;
+    }
+}
+
+.navbar .container .user-options {
+    width: 60% !important;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .container .user-options form {
+    width: 30% !important;
+    background-color: transparent;
+    border: none;
+    display: none !important;
+}
+
+.navbar .container .user-options form input {
+    width: 100% !important;
+    border-radius: 35px;
+    padding: 21px 5px !important;
+    border: 1px solid white;
+}
+
+.navbar .container .user-options form input::placeholder {
+    font-family: "lufga";
+    font-size: 18px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.navbar .container .user-options form input[type=text] {
+    font-size: 20px;
+    color: black;
+    font-family: "lufga";
+    text-align: center;
+}
+
+.navbar .container .user-options i {
+    font-size: 18px;
+    color: white;
+    border-radius: 50%;
+    padding: 22px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.navbar .container .user-options i:hover {
+    background-color: white;
+    color: black;
+}
+
+.navbar .container .user-options a {
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    padding: 20px 50px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.navbar .container .user-options a:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+    margin: 2%;
+}
+
+/* ============================ banner =========================== */
+
+.banner {
+    height: 1000px;
+    background: url(../IMG/banner-image.webp);
+    background-position: top center;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    margin: 15px 15px 0 15px;
+    position: relative;
+}
+
+.banner .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .container .row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.banner .container .row .heading {
+    height: 70%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 5%;
+}
+
+.banner .container .row .banner-head {
+    font-size: 38px;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.banner .container .row .banner-text {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .container .row .banner-text h1 {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.banner .container .row .banner-text h2 {
+    font-size: 280px !important;
+    color: white;
+    position: relative;
+    z-index: 1;
+    transition: all 1s ease;
+}
+
+.banner .container .row .banner-text:hover {
+    .leaf {
+        transform: rotate(5deg);
+    }
+}
+
+.banner .container .row .banner-text .leaf {
+    width: 30%;
+    height: 35%;
+    position: absolute;
+    top: 26% !important;
+    left: 44% !important;
+    transform: translate(-50% -50%) !important;
+    z-index: 2;
+    transition: all 1s ease;
+}
+
+.banner .container .row .banner-text .leaf img {
+    width: 100%;
+}
+
+.banner .container .row .desc {
+    width: 80%;
+    padding: 5px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.banner .container .row .content {
+    width: 100%;
+    height: 22%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px 12px 40px 12px;
+}
+
+.banner .container .row .content .content-box {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.banner .container .row .content .plant-count {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.banner .container .row .plant-count .plant-figure {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 10%;
+    background-color: rgb(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    border: 1px solid rgb(180, 180, 180);
+}
+
+
+.banner .container .row .plant-count .plant-type {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10%;
+    background-color: rgb(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    border: 1px solid rgb(180, 180, 180);
+    transition: all 0.5s ease;
+}
+
+.banner .container .row .plant-count .plant-type:hover {
+    left: 8%;
+}
+
+.banner .container .row .plant-count .plant-type #top {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+}
+
+.banner .container .row .plant-count .plant-type #center {
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+}
+
+.banner .container .row .plant-count .plant-type #bottom {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+}
+
+.banner .container .row .content .banner-btn {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    position: relative;
+}
+
+.banner .container .row .content .shop-plants {
+    width: 100%;
+    height: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 40px;
+    transition: all 0.5s ease;
+    background-color: white;
+}
+
+.banner .container .row .shop-plants:hover {
+    background-color: black;
+
+    a {
+        color: white;
+    }
+}
+
+
+.banner .container .row .shop-plants a {
+    font-size: 26px;
+    color: black;
+    font-weight: 600;
+
+}
+
+.arrow-down {
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    transition: all 0.5s ease;
+}
+
+.arrow-down:hover {
+    background-color: white;
+
+    i {
+        color: black;
+    }
+}
+
+.arrow-down i {
+    font-size: 50px;
+    color: white;
+}
+
+/* ========================== for people ============================ */
+
+.for-people {
+    width: 100%;
+    height: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.for-people .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.for-people .container .row {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.for-people .container .row .heading {
+    width: 22%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.for-people .container .row .heading h2 {
+    font-size: 44px;
+    color: black;
+    font-weight: 900;
+}
+
+.for-people .container .row .heading p {
+    font-size: 13px;
+}
+
+.for-people .container .row .video-content {
+    width: 20%;
+    height: 80%;
+    position: relative;
+    border-radius: 20px !important;
+    filter: grayscale(1);
+    transition: all 1s ease;
+}
+
+.for-people .container .row .video-content:hover {
+    transform: scale(1.2);
+    filter: grayscale(0);
+}
+
+.for-people .container .row .video-content i {
+    width: 10%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 89%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: black;
+    padding: 8%;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+.for-people .container .row .video-content video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px !important;
+}
+
+.for-people .container .row .people-desc {
+    width: 52%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.for-people .container .row .people-desc p {
+    font-size: 36px;
+}
+
+.for-people .container .row .people-desc span {
+    padding-top: 5% !important;
+}
+
+.for-people .container .row .people-desc span.image img {
+    height: 100%;
+}
+
+/* ======================= plant-gallery ======================= */
+
+.plant-gallery {
+    width: 100%;
+    height: 800px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plant-gallery .container {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plant-gallery .container #row-1 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plant-gallery .container #row-1 .gallery-menu{
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plant-gallery .container #row-1 .gallery-btn{
+    width: 100%;
+    height: 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plant-gallery .container #row-1 a {
+    padding: 15px 50px;
+    border: 1px solid black;
+    border-radius: 50px;
+    color: black;
+    font-size: 26px;
+    transition: all 0.5s ease;
+    width: 25%;
+}
+
+.plant-gallery .container #row-1 a:hover {
+    color: white;
+    background-color: black;
+}
+
+.plant-gallery .container #row-1 a.active {
+    background-color: black;
+    color: white;
+}
+
+.plant-gallery .container #row-1 .see-all {
+    width: 30%;
+    padding: 15px 36px;
+    margin-left: 10px;
+    font-size: 26px;
+    font-weight: 600;
+    font-family: lufga;
+    background-color: transparent;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.plant-gallery .container #row-1 .see-all:hover {
+    color: white;
+    background-color: black;
+}
+
+.plant-gallery .container #row-2 {
+    width: 100%;
+    height: 75% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout .plant-card .heading h3 {
+    font-size: 40px;
+    color: white;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout .plant-card .heading button {
+    width: 10%;
+    height: 60%;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout .plant-card .plant-desc {
+    width: 100%;
+    height: 40%;
+    font-size: 16px;
+    color: white;
+    font-weight: lighter;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout .plant-card .button {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    background-color: transparent;
+    border-top: 1px solid white;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout .plant-card .button button {
+    border-radius: 50px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-family: lufga;
+    position: relative;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout .plant-card .button button img {
+    margin-right: 5%;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #pet-friendly {
+    width: 50%;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 2%;
+    background: url(../IMG/card-img.webp) no-repeat;
+    background-size: cover !important;
+    border-radius: 20px;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #pet-friendly .heading {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #pet-friendly .heading button {
+    background-color: transparent;
+    border: none !important;
+    height: 100% !important;
+    width: 20%;
+    border-radius: unset;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #pet-friendly .heading button i {
+    background-color: white;
+    padding: 15px !important;
+    display: inline-block;
+    border: unset;
+    border-radius: 50%;
+    font-size: 25px;
+
+}
+
+
+.plant-gallery .container #row-2 .plant-card-layout #pet-friendly .heading button:hover {
+    i {
+        background-color: black;
+        color: white;
+        border-color: black;
+    }
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #orchids {
+    width: 24%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 4% 2.5% 2.5% 2.5%;
+    background: url(../IMG/card-video-1.webp) no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    filter: grayscale(1);
+    transition: all 0.5s ease;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #orchids:hover {
+    filter: grayscale(0);
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #orchids .heading button {
+    width: 10%;
+    height: 60%;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: none;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #orchids .heading button i {
+    font-size: 18px;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #succulents {
+    width: 24%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 4% 2.5% 2.5% 2%;
+    background: url(../IMG/card-img-2.webp) no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    filter: grayscale(1);
+    transition: all 0.5s ease;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #succulents:hover {
+    filter: grayscale(0);
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #succulents .heading button {
+    width: 10%;
+    height: 60%;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: none;
+}
+
+.plant-gallery .container #row-2 .plant-card-layout #succulents .heading button i {
+    font-size: 18px;
+}
+
+/* ====================== new plants ======================= */
+
+.new-plants {
+    width: 100%;
+    height: 1000px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.new-plants .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-plants .container .row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-plants .container .row .heading {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-plants .container .row .heading h2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 125px;
+}
+
+.new-plants .container .row .heading p {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.new-plants .container .row .new-plants-part-2 {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-plants .container .row .new-plants-part-2 .new-plants-card-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ======================== indoor ======================== */
+
+.indoor {
+    width: 100%;
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indoor .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indoor .container .row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.indoor .container .row .heading {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indoor .container .row .heading h2 {
+    font-size: 125px;
+}
+
+.indoor .container .row .indoor-part-2 {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout .indoor-card {
+    padding: 1%;
+    position: relative;
+    overflow: hidden;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout .indoor-card #card-name {
+    font-size: 70px;
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 4%;
+    transition: all 0s ease;
+    visibility: visible;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout .indoor-card:hover {
+    .card-content {
+
+        top: 37%;
+    }
+
+    #card-name {
+        top: -100%;
+        left: 0%;
+        visibility: collapse;
+        opacity: 0;
+    }
+
+    button {
+        background-color: white !important;
+        color: black !important;
+    }
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout .indoor-card .button {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout .indoor-card .button button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 24px !important;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout .indoor-card .card-content {
+    width: 96%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    padding: 2% 1% 2% 2%;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    transition: all 0.5s ease;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout .indoor-card .card-content h3 {
+    font-size: 70px;
+    color: white;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout .indoor-card .card-content p {
+    font-size: 16px;
+    color: white;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout .indoor-card .button {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 18px;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout .indoor-card .button button {
+    font-size: 18px;
+    margin: 0.5%;
+    padding: 20px 23px !important;
+    border-radius: 50% !important;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout #card-1 {
+    width: 59%;
+    height: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../IMG/indoor-img-1.webp) no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout #card-2 {
+    width: 39%;
+    height: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../IMG/indoor-img-2.webp) no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout #card-3 {
+    width: 39%;
+    height: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../IMG/indoor-img-3.webp) no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.indoor .container .row .indoor-part-2 .indoor-collection-layout #card-4 {
+    width: 59%;
+    height: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../IMG/indoor-img-4.webp) no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+/* ========================= quality ========================== */
+
+.quality {
+    width: 100%;
+    height: 1242px;
+}
+
+.quality .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quality .container .row {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quality .container .row .heading {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quality .container .row .heading h2 {
+    font-size: 100px;
+    color: black;
+    text-align: center;
+}
+
+.quality .container .row .heading p {
+    padding: 0 16%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.quality .container .row .quality-content {
+    width: 60%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quality .container .row .quality-content #content-image {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quality .container .row .quality-content #content-image img {
+    height: 100%;
+}
+
+.quality .container .row .quality-content .play-icon {
+    position: absolute;
+    width: 100px !important;
+    height: 100px !important;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease;
+}
+
+.quality .container .row .quality-content .play-icon:hover {
+    backdrop-filter: blur(0px);
+}
+
+/* ============================ accordion ============================= */
+
+.accordion {
+    width: 100%;
+    height: 750px !important;
+}
+
+.accordion .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion .container .row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+}
+
+.accordion .container .row .accordion-wrapper {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion .container .row .accordion-wrapper .faq-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    padding: 4% 2% !important;
+}
+
+.accordion .container .row .accordion-wrapper .faq-content .question {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1%;
+}
+
+.accordion .container .row .accordion-wrapper .faq-content .question h3 {
+    font-size: 46px;
+    width: 95%;
+    height: 100%;
+    position: relative;
+    display: block;
+}
+
+.accordion .container .row .accordion-wrapper .faq-content .question h3::after {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -40%;
+    bottom: 0;
+    right: 0;
+    font-family: fontAwesome;
+    content: "\f063";
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.accordion .container .row .accordion-wrapper .faq-content .active.question h3::after {
+    transform: rotate(180deg);
+}
+
+.accordion .container .row .accordion-wrapper .faq-content .question button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px 21px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    transform: rotate(45deg);
+}
+
+.accordion .container .row .accordion-wrapper .faq-content .question button:hover {
+    transform: rotate(-45deg);
+}
+
+.accordion .container .row .accordion-wrapper .faq-content .answer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    padding-right: 27%;
+
+    p {
+        font-size: 18px;
+    }
+}
+
+/* ============================ footer =========================== */
+
+.footer-top {
+    height: 900px !important;
+    background: url(../IMG/contact-section.webp);
+    background-size: cover !important;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin: 0 15px 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-top .container {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-top .container .row {
+    flex-direction: column;
+    height: 95%;
+    justify-content: space-around;
+}
+
+.footer-top .container .row .row-head {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+}
+
+.footer-top .container .row .row-head figure {
+    width: 90%;
+}
+
+.footer-top .container .row .row-head figure img {
+    width: 100%;
+}
+
+.footer-top .container .row .footer-head{
+    width: 100% !important;
+    font-size: 70px !important;
+    text-align: center !important;
+}
+
+.footer-top .container .row p {
+    font-size: 24px;
+    color: #fff;
+    font-weight: none;
+    width: 48%;
+    text-align: center;
+}
+
+.footer-top .container .row .footer-bottom {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.footer-top .container .row .footer-bottom .footer-menu {
+    width: 95%;
+    height: 24.9%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 35px;
+}
+
+.footer-top .container .row .footer-bottom .footer-menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.footer-top .container .row .footer-bottom .footer-menu ul li a {
+    font-size: 25px;
+    color: #000;
+    text-decoration: underline;
+    padding: 20px 40px;
+    border: 1px solid #000;
+    border-radius: 35px;
+}
+
+#whatsapp{
+    background-color: rgb(27, 215, 99);
+}
+
+.footer-ico {
+    display: none;
+}
+
+.footer-top .container .row .footer-bottom .footer-menu ul li #twitter {
+    text-decoration: none !important;
+}
+
+.footer-top .container .row .footer-bottom .footer-menu ul li #pinterest {
+    text-decoration: none !important;
+}
+
+.footer-top .container .row .footer-bottom .footer-menu ul li a.select {
+    color: #fff;
+    background-color: #078522;
+    letter-spacing: 0.6px;
+    border: none;
+}
+
+.footer-top .container .row .footer-bottom .footer-text p.bottom {
+    font-size: 24px;
+    color: #000;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.new-plants-card-layout .swiper {
+    width: 100%;
+    height: 100%;
+    position: relative !important;
+    overflow-y: visible !important;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-plants-card-layout .swiper-wrapper {
+    width: 100% !important;
+    height: 70% !important;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.new-plants-card-layout .swiper-slide {
+    height: 100% !important;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: start !important;
+}
+
+.new-plants-card-layout .swiper-slide:hover {
+    .price {
+        transform: scale(1.5) !important;
+        margin-left: 5%;
+        filter: drop-shadow(0px 0px 8px rgb(133, 133, 133));
+    }
+
+    img {
+        transform: scale(1.5) !important;
+    }
+}
+
+.new-plants-card-layout .swiper-slide .card-image {
+    width: 100%;
+    height: 73%;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    position: relative;
+}
+
+.new-plants-card-layout .swiper-slide .card-image figure {
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease;
+}
+
+.new-plants-card-layout .swiper-slide .card-image figure img {
+    width: 100% !important;
+    transition: all 0.5s ease;
+}
+
+.new-plants-card-layout .swiper-slide .card-image .wishlist-btn {
+    position: absolute;
+    z-index: 5;
+    left: 5%;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.new-plants-card-layout .swiper-slide .card-image .wishlist-btn .heart {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 12px !important;
+}
+
+.new-plants-card-layout .swiper-slide .card-content {
+    width: 95% !important;
+    height: 25% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.new-plants-card-layout .swiper-slide .card-content .card-desc {
+    width: 70% !important;
+    height: 95% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.new-plants-card-layout .swiper-slide .card-content .card-desc h3 {
+    font-size: 24px !important;
+    text-align: left;
+}
+
+.new-plants-card-layout .swiper-slide .card-content .card-desc p {
+    font-size: 18px !important;
+    padding-bottom: 5% !important;
+}
+
+.new-plants-card-layout .swiper-slide .card-content .card-desc .price {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    transition: all 0.5s ease;
+}
+
+.new-plants-card-layout .swiper-slide .card-content button {
+    padding: 18px 21px;
+    border-radius: 50% !important;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border: 1px solid black;
+    transition: all 0.5s ease;
+}
+
+.new-plants-card-layout .swiper-slide .card-content button:hover {
+    background-color: white !important;
+    border: 1px solid black !important;
+    color: black !important;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: black !important;
+    width: 4% !important;
+    height: 15px !important;
+    border-radius: 50px !important;
+}
